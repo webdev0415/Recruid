@@ -1,0 +1,200 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 150px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+.row {
+  composes: global(row);
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 30px;
+  }
+}
+
+.tableContainer {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(black, 0.1);
+  margin-bottom: 30px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.header {
+  height: auto !important;
+  margin: 0 !important;
+  margin-bottom: 15px !important;
+  margin-top: 50px !important;
+  padding: 20px 0;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px !important;
+  }
+}
+
+.company {
+  align-items: center;
+  display: flex;
+}
+
+.companyName {
+  composes: global(color-grey-medium);
+
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.tableItem,
+.tableItemFirst {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tableItem {
+  overflow: inherit;
+}
+
+.tableItemFirst {
+  max-width: 400px;
+
+  button {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tableItem,
+.tableHeader,
+.tableItemFirst,
+.tableMenu,
+.tableItemStatus,
+.tableItemCheckBox,
+.tableDate,
+.tableButtons,
+.tableStatus,
+.tableCandidates {
+  border: 0;
+  border-bottom: 1px solid #eee !important;
+
+  button {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.tableItemStatus {
+  padding: 9px 15px !important;
+  vertical-align: middle !important;
+}
+
+.tableHeader,
+.tableDate,
+.tableStatus,
+.tableCandidates {
+  color: #9a9ca1;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.67px;
+  padding: 10px 15px !important;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.tableItemFirst {
+  composes: global(color-black);
+  font-weight: 500;
+
+  a {
+    color: #000;
+    font-weight: 500;
+  }
+}
+
+.tableItem,
+.tableItemFirst {
+  // font-size: 15px;
+  padding: 10px 15px !important;
+  vertical-align: middle !important;
+}
+
+.tableItemCheckBox {
+  padding: 10px 15px !important;
+  vertical-align: middle !important;
+  width: 46px;
+}
+
+.tableStatus {
+  width: 160px;
+}
+
+.tableCandidates {
+  width: 140px;
+}
+
+.tableDate {
+  width: 130px;
+}
+
+.tableButtons {
+  max-width: 57px;
+  padding: 13px 20px !important;
+  text-align: right;
+
+  button {
+    height: 18px !important;
+  }
+}
+
+.loadMore {
+  composes: global(background-blue) global(color-white);
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+
+.loadMoreContainer {
+  border-top: 1px solid #eee;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.emptyContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 230px);
+}
+
+.empty {
+  max-width: 500px;
+  text-align: center;
+
+  img {
+    max-height: 300px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}

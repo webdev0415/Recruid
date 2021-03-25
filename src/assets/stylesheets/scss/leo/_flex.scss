@@ -1,0 +1,79 @@
+.leo-flex {
+  display: flex;
+
+  &-center {
+    display: flex;
+    align-items: center;
+
+    &-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-start {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-end {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-around {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &-evenly {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  }
+}
+.leo-align {
+  align-items: center;
+
+  &-center {
+    align-items: center;
+  }
+  &-baseline {
+    align-items: baseline;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+}
+.leo-justify {
+  justify-content: center;
+
+  &-center {
+    justify-content: center;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-start {
+    justify-content: flex-start;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-evenly {
+    justify-content: space-evenly;
+  }
+}

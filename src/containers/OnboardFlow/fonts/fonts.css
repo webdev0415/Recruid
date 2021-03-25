@@ -1,0 +1,82 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3860220, 2020-01-27T09:38:42-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Gelion-Light by Letter Omega Typefoundry
+ * URL: https://www.myfonts.com/fonts/letter-omega/gelion/light/
+ *
+ * Webfont: Gelion-Medium by Letter Omega Typefoundry
+ * URL: https://www.myfonts.com/fonts/letter-omega/gelion/medium/
+ *
+ * Webfont: Gelion-Regular by Letter Omega Typefoundry
+ * URL: https://www.myfonts.com/fonts/letter-omega/gelion/regular/
+ *
+ * Webfont: Gelion-Bold by Letter Omega Typefoundry
+ * URL: https://www.myfonts.com/fonts/letter-omega/gelion/bold/
+ *
+ *
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2017 by Doni Sukma. All rights reserved.
+ *
+ * © 2020 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3ae6fc");
+
+@font-face {
+  font-family: "Gelion-Light";
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_0_0.eot");
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_0_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_0_0.woff2")
+      format("woff2"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_0_0.woff")
+      format("woff"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_0_0.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Gelion-Medium";
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_1_0.eot");
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_1_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_1_0.woff2")
+      format("woff2"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_1_0.woff")
+      format("woff"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_1_0.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Gelion-Regular";
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_2_0.eot");
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_2_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_2_0.woff2")
+      format("woff2"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_2_0.woff")
+      format("woff"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_2_0.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Gelion-Bold";
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_3_0.eot");
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_3_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_3_0.woff2")
+      format("woff2"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_3_0.woff")
+      format("woff"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/3AE6FC_3_0.ttf")
+      format("truetype");
+}

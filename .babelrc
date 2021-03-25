@@ -1,0 +1,14 @@
+{
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    },
+    "staging": {
+      "plugins": [
+        "@babel/plugin-proposal-optional-chaining",
+        "@babel/plugin-proposal-numeric-separator",
+        ["babel-plugin-styled-components"]
+      ]
+    }
+  }
+}

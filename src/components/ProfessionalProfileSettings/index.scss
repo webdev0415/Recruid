@@ -1,0 +1,49 @@
+@import "src/assets/stylesheets/scss/settings";
+
+.settings-resume {
+  &-item {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-details {
+    align-items: center;
+    display: flex;
+  }
+
+  &-icon {
+    cursor: pointer;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+
+  &-info {
+    color: $grey-medium;
+    font-size: 12px;
+  }
+
+  &-upload {
+    border: 2px dashed $border-color-grey;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 25px 0;
+  }
+
+  &-text {
+    color: $grey-light;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 0;
+    text-align: center;
+  }
+}

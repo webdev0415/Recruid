@@ -1,0 +1,29 @@
+/**
+ * FONTS
+ * --
+ * Contains all of the CSS used to drag in custom fonts into the website. The
+ * site currently only uses one custom web font - 'Gotham'. Below shows details
+ * of how to pull the 3rd party service Typography.com Gotham font, and the
+ * locally hosted Gotham font.
+ */
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+@font-face {
+  font-family: "hk_groteskmedium";
+  src: url("https://leo-static-assets.s3.amazonaws.com/fonts/hkgrotesk-medium-webfont.woff2")
+      format("woff2"),
+    url("https://leo-static-assets.s3.amazonaws.com/fonts/fonts/hkgrotesk-medium-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

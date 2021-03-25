@@ -1,0 +1,97 @@
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+p {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+hr {
+  border-color: $border-color-grey;
+  margin: 25px 0;
+}
+
+.alert {
+  animation: fadein 2s;
+  border-radius: 0px;
+}
+
+span {
+  display: block;
+  line-height: normal;
+}
+
+.loader {
+  background-color: $color-primary;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
+
+.loader:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background-color: #286c28;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  from {
+    left: -200px;
+    width: 30%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 120%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.container {
+  max-width: 940px;
+  // margin: 30px auto;
+
+  &-ats {
+    max-width: 1170px;
+    width: 100%;
+  }
+}
+
+.page-wrapper {
+  padding-top: 50px;
+
+  @include media-tablet() {
+    min-height: calc(100vh - 100px);
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  &-outer {
+    padding-top: 120px;
+
+    @include media-tablet() {
+      padding-top: 150px;
+    }
+  }
+}

@@ -1,0 +1,582 @@
+/**
+ * Forms
+ * --
+ * Contains CSS for form containers and individual components across the website.
+*/
+
+.input {
+  background: $white;
+  border: 1px solid $border-color-grey;
+  border-radius: 4px;
+  box-shadow: none;
+  color: $color-secondary;
+  font-size: 15px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  width: 100%;
+
+  &:active,
+  &:focus {
+    border: 1px solid $color-primary;
+    box-shadow: none;
+  }
+}
+
+/**
+ * Default Input Styling
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+input[type="checkbox"] {
+  appearance: checkbox;
+}
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+textarea.form-control {
+  height: 100px;
+  padding-top: 15px;
+}
+
+.form-label {
+  font-size: 13px;
+  margin-bottom: 10px;
+
+  .right {
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    height: 22px;
+  }
+}
+
+.form-heading {
+  display: block;
+
+  @include media-tablet() {
+    color: #74767b;
+    font-size: 15px;
+  }
+
+  &--salary {
+    display: inline-block;
+  }
+
+  &--fee {
+    float: right;
+  }
+
+  &-small {
+    color: $color-secondary;
+    font-size: 12px;
+  }
+}
+
+.form-value {
+  color: $color-secondary;
+}
+
+.form {
+  &-skill {
+    margin-bottom: 20px;
+  }
+
+  &-skills {
+    display: inline-block;
+    margin-bottom: 0 !important;
+    margin-right: 5px;
+
+    &:after {
+      content: ",";
+    }
+
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+  }
+}
+
+.form-control {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  box-shadow: none;
+  color: $color-secondary;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  -webkit-appearance: none;
+
+  &:focus {
+    background: rgba($color-primary, 0.03);
+    border-color: $color-primary !important;
+    box-shadow: none !important;
+  }
+
+  @include media-tablet() {
+    font-size: 14px;
+  }
+
+  &__to {
+    display: none;
+    font-size: 12px;
+    left: 48.5%;
+    opacity: 0.5;
+    position: absolute;
+    top: 45px;
+
+    @include media-tablet() {
+      display: block;
+    }
+  }
+
+  &-description {
+    height: 100%;
+    min-height: 200px;
+    max-height: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 0;
+  }
+
+  &-select {
+    background: $white;
+    border: 0;
+    box-shadow: 0 1px 2px 1px rgba($black, 0.05),
+      inset 0 0 0 1px rgba($black, 0.1);
+
+    &:focus {
+      border: 0 !important;
+      box-shadow: 0 1px 2px 1px rgba($black, 0.05),
+        inset 0 0 0 1px rgba($black, 0.1) !important;
+    }
+  }
+}
+
+.input-group {
+  margin-bottom: 30px;
+  width: 100%;
+
+  &-btn {
+    width: auto;
+  }
+
+  &-pre {
+    display: flex;
+  }
+
+  .form-control {
+    z-index: 0;
+  }
+
+  &-prepend {
+    margin-right: -1px;
+
+    .input-group-text {
+      align-items: center;
+      background-color: $border-color-grey;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      color: $grey-dark;
+      display: flex;
+      height: 100%;
+      padding: 10px 15px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  .btn {
+    background: $white;
+    border: 1px solid #e5e5e5;
+    box-shadow: none;
+    font-size: 14px;
+    height: 40px;
+    padding: 6px 20px;
+
+    &.active {
+      background: $color-primary;
+      border-color: $color-primary;
+      color: $white;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.signup__form {
+  .form-control,
+  .skill-tags,
+  .input-group {
+    margin-bottom: 0;
+  }
+
+  &-row,
+  .signup__terms {
+    margin-bottom: 30px;
+  }
+
+  &-small {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+  }
+}
+
+.form-input {
+  margin-bottom: 20px;
+}
+
+.form-checkbox {
+  margin-right: 10px !important;
+}
+
+input::-webkit-input-placeholder {
+  color: $grey-light !important;
+}
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: $grey-light !important;
+}
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $grey-light !important;
+}
+
+input:-ms-input-placeholder {
+  color: $grey-light !important;
+}
+
+select {
+  -webkit-appearance: none;
+  background: url("https://leo-static-assets.s3.amazonaws.com/icons/icon-chevron-small.svg")
+    center right 15px no-repeat $white !important;
+}
+
+.Select span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Select-control {
+  border: 1px solid #e5e5e5 !important;
+  margin-bottom: 30px;
+}
+
+.Select-input {
+  height: 38px !important;
+}
+
+.Select-placeholder {
+  line-height: 38px !important;
+  padding-left: 15px !important;
+}
+
+.Select-value {
+  padding-left: 15px !important;
+}
+
+.Select-value-label {
+  color: #1e1e1e;
+  font-size: 14px;
+  line-height: 38px;
+}
+
+.autocomplete-container {
+  position: relative;
+}
+
+.autocomplete-dropdown-container {
+  left: 0;
+  position: absolute !important;
+  right: 0;
+  top: 45px !important;
+  z-index: 5;
+}
+
+.skill-tags {
+  margin-bottom: 40px;
+  position: relative;
+
+  &__input {
+    .form-control {
+      margin-bottom: 0;
+    }
+  }
+
+  &__suggestions {
+    background: $white;
+    border: 1px solid $border-color-grey;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-top: 2px;
+    max-height: 200px;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+
+    ul {
+      li {
+        border-bottom: 1px solid $border-color-grey;
+        padding: 10px 20px;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    &--active {
+    }
+  }
+
+  &__tag {
+    // background-color: $grey-dark;
+    // border-radius: 6px;
+    // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    // color: $white;
+    // display: inline-block;
+    // font-weight: 500;
+    // height: 40px;
+    // margin-bottom: 20px;
+    // margin-right: 10px;
+    // padding: 11px 15px;
+
+    background-color: #004a6d;
+    border-radius: 50px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+  }
+
+  &__remove {
+    // background-color: #c1c3c8;
+    // border-radius: 50%;
+    // color: $grey-dark !important;
+    // font-weight: 500;
+    // margin-left: 10px;
+    // padding: 0px 4px;
+
+    background-color: #c1c3c8;
+    border-radius: 50%;
+    color: #2c2c2c !important;
+    font-weight: 500;
+    margin-left: 10px;
+    padding: 0px 4px;
+    background: #ffffffe6;
+
+    &:hover {
+      color: $grey-dark !important;
+      text-decoration: none;
+    }
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.media-controls {
+  progress {
+    display: none;
+  }
+
+  $track-color: $white !default;
+  $thumb-color: $white !default;
+
+  $thumb-radius: 8px !default;
+  $thumb-height: 16px !default;
+  $thumb-width: 16px !default;
+  $thumb-shadow-size: 4px !default;
+  $thumb-shadow-blur: 4px !default;
+  $thumb-shadow-color: rgba(0, 0, 0, 0.2) !default;
+  $thumb-border-width: 2px !default;
+  $thumb-border-color: transparent !default;
+
+  $track-width: 100% !default;
+  $track-height: 8px !default;
+  $track-shadow-size: 0 !default;
+  $track-shadow-blur: 0 !default;
+  $track-shadow-color: transparent !default;
+  $track-border-width: 0 !default;
+  $track-border-color: transparent !default;
+
+  $track-radius: 4px !default;
+  $contrast: 5% !default;
+
+  @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
+    box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color,
+      0 0 $shadow-size lighten($shadow-color, 5%);
+  }
+
+  @mixin track {
+    cursor: pointer;
+    height: $track-height;
+    transition: all 0.2s ease;
+    width: $track-width;
+  }
+
+  @mixin thumb {
+    @include shadow(
+      $thumb-shadow-size,
+      $thumb-shadow-blur,
+      $thumb-shadow-color
+    );
+    background: $thumb-color;
+    border: $thumb-border-width solid $thumb-border-color;
+    border-radius: $thumb-radius;
+    cursor: pointer;
+    height: $thumb-height;
+    width: $thumb-width;
+  }
+
+  [type="range"] {
+    -webkit-appearance: none;
+    margin: $thumb-height / 2 0;
+    width: $track-width;
+
+    &:focus {
+      outline: 0;
+
+      &::-webkit-slider-runnable-track {
+        background: lighten($track-color, $contrast);
+      }
+
+      &::-ms-fill-lower {
+        background: $track-color;
+      }
+
+      &::-ms-fill-upper {
+        background: lighten($track-color, $contrast);
+      }
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+      @include shadow(
+        $track-shadow-size,
+        $track-shadow-blur,
+        $track-shadow-color
+      );
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
+      border-radius: $track-radius;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb;
+      -webkit-appearance: none;
+      margin-top: ((-$track-border-width * 2 + $track-height) / 2) -
+        ($thumb-height / 2);
+    }
+
+    &::-moz-range-track {
+      @include track;
+      @include shadow(
+        $track-shadow-size,
+        $track-shadow-blur,
+        $track-shadow-color
+      );
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
+      border-radius: $track-radius;
+    }
+
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-track {
+      @include track;
+      background: transparent;
+      border-color: transparent;
+      border-width: ($thumb-height / 2) 0;
+      color: transparent;
+    }
+
+    &::-ms-fill-lower {
+      @include shadow(
+        $track-shadow-size,
+        $track-shadow-blur,
+        $track-shadow-color
+      );
+      background: darken($track-color, $contrast);
+      border: $track-border-width solid $track-border-color;
+      border-radius: $track-radius * 2;
+    }
+
+    &::-ms-fill-upper {
+      @include shadow(
+        $track-shadow-size,
+        $track-shadow-blur,
+        $track-shadow-color
+      );
+      background: $track-color;
+      border: $track-border-width solid $track-border-color;
+      border-radius: $track-radius * 2;
+    }
+
+    &::-ms-thumb {
+      @include thumb;
+      margin-top: 0;
+    }
+  }
+}

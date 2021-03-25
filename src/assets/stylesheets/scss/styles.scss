@@ -1,0 +1,56 @@
+/**
+ * SITE
+ * --
+ * Contains all CSS used to format the website. Styles are broken up into
+ * multiple, more manageable files and imported into this stylesheet using SASS.
+ */
+
+@charset 'UTF-8';
+
+/**
+ * Site
+ * --
+ * General stylesheets and styles that are used across the entire website to
+ * format all/most pages.
+ */
+@import "fonts";
+@import "settings";
+@import "reset";
+@import "formatting";
+/**
+ * Vendor libraries
+ * --
+ * Useful SASS libraries and mixins that can be imported and used locally
+ * written by external resources.
+ */
+// @import "vendor/slick";
+
+/**
+ * Components
+ * --
+ * Single purpose stylesheets used for individual components/element blocks on
+ * the page that are flexible enough to be re-used across multiple pages.
+ */
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/modals";
+@import "components/table";
+
+/**
+ * Pages
+ * --
+ * Stylesheets that are specific to a single page or group of pages.
+ */
+@import "pages/activity_posts";
+@import "pages/activity";
+@import "pages/app";
+@import "pages/onboarding";
+@import "pages/profile";
+
+/** custom rules */
+@import "leo/box-model";
+@import "leo/flex";
+@import "leo/general";
+@import "leo/position";
+@import "leo/text";

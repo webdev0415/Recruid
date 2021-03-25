@@ -1,0 +1,19 @@
+.link {
+  composes: global(border-bottom-1);
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  a {
+    color: #004a6d;
+    text-decoration: underline;
+  }
+}
+
+.header {
+  composes: global(color-secondary);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}

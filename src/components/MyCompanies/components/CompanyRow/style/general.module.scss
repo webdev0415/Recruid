@@ -1,0 +1,60 @@
+.row {
+  composes: global(background-white);
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+
+  @media screen and (min-width: 768px) {
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+}
+
+.rowCompany,
+.rowStats {
+  align-items: center;
+  display: flex;
+}
+
+.companyName {
+  composes: global(color-secondary);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+
+  a {
+    color: #1e1e1e;
+  }
+}
+
+.companyType {
+  composes: global(color-grey-medium);
+  font-size: 12px;
+}
+
+.statDiv {
+  border-right: 1px solid #eee;
+  display: none;
+  margin-right: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.statCount {
+  composes: global(color-secondary);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.statMetric {
+  composes: global(color-grey-medium);
+  font-size: 12px;
+}

@@ -1,0 +1,63 @@
+.filter-selector {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 190px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &.is-focused {
+    .Select-control {
+      box-shadow: none !important;
+    }
+  }
+
+  .Select--multi .Select-input {
+    margin-left: 30px;
+  }
+
+  &.Select--multi .Select-multi-value-wrapper {
+    padding-left: 5px;
+  }
+
+  .Select-menu-outer {
+    // composes: global(background-white);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+  }
+
+  .Select-option {
+    &:hover,
+    &.is-focused {
+      // composes: global(background-border-color);
+      background: #eee;
+    }
+  }
+
+  .Select-option.is-selected {
+    background: transparent;
+
+    &:hover,
+    &.is-focused {
+      // composes: global(background-border-color);
+      background: #eee;
+    }
+  }
+
+  input {
+    font-size: 16px !important;
+    line-height: 20px !important;
+    // padding-left: 15px;
+  }
+}

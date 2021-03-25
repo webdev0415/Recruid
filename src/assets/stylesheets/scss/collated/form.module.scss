@@ -1,0 +1,57 @@
+.label {
+  display: block;
+  font-size: 12px;
+  color: #3f3f3f;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+
+.input {
+  composes: global(input);
+}
+
+.inputDisabled {
+  composes: global(input);
+  background: #f6f6f6 !important;
+  border: 1px solid #eee !important;
+  pointer-events: none;
+}
+
+.link {
+  color: #74767b;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.button {
+  composes: global(color-white) global(background-blue);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  font-weight: 500;
+  height: 40px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.buttonContainer {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.terms {
+  display: flex;
+  font-size: 14px;
+  color: #9a9ca1;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+  p {
+    position: relative;
+    top: -2px;
+  }
+}

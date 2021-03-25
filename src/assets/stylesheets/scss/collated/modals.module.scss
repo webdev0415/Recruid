@@ -1,0 +1,35 @@
+.modalHeader {
+  composes: global(border-bottom-1);
+  padding: 30px 0;
+  position: relative;
+
+  h3 {
+    color: #1e1e1e;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    text-align: center;
+  }
+
+  button {
+    opacity: 1;
+    position: absolute;
+    right: 30px;
+    top: 31px;
+  }
+}
+
+.modalFooter {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  width: 100%;
+
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 130px;
+    min-width: 130px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+variables:
+  DOCKER_DRIVER: overlay2
+
+image: nikolaik/python-nodejs:latest
+
+cache:
+  paths:
+    - node_modules/
+    - .npm-cache
+
+before_script:
+  - apt-get update -qq && apt-get install
+
+stages:
+  - install
+  - test
+  - deploy
+
+install:
+  stage: install
+  only:
+    - master
+  # before_script:
+  #   - npm config set cache .yarn
+  script:
+    - npm install --frozen-lockfile --check-files
+  # cache:
+  #   paths:
+  #     - node_modules/
+  # artifacts:
+  #   untracked: true
+
+# test:
+#   stage: test
+#   only:
+#     - master
+#   dependencies:
+#     - install
+#   before_script:
+#     - rm -rf .yarn
+#   script:
+#     - yarn test
+#   artifacts:
+#     untracked: true
+
+deployStaging:
+  stage: deploy
+  only:
+    - develop
+  dependencies:
+    - install
+  script:
+    - npm install --frozen-lockfile --check-files
+    - npm run build:staging
+    - pip3 install awscli
+    - aws configure set profile bucket-prod
+    - aws s3 sync ./build/ s3://staging.recruitd.com
+    - aws cloudfront create-invalidation --distribution-id E2HVCFM6K6RKSD --paths "/*";
+  # cache:
+  #   paths:
+  #     - node_modules/
+
+deployLive:
+  stage: deploy
+  only:
+    - master
+  dependencies:
+    - install
+    # - test
+  script:
+    - npm install --frozen-lockfile --check-files
+    - npm run build
+    - pip3 install awscli
+    - aws configure set profile bucket-prod
+    - aws s3 sync ./build/ s3://app.recruitd.com
+    - aws cloudfront create-invalidation --distribution-id E34OVPNSWBCBCR --paths "/*";

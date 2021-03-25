@@ -1,0 +1,258 @@
+/**
+ * MODALS
+ * --
+ * Contains CSS for modals, containers and individual modals across the website.
+*/
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/**
+ * Remove modal element styling
+ */
+.modal-content {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  display: block;
+
+  @include media-tablet() {
+    border-radius: 8px;
+    // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.modal {
+  text-align: center;
+  padding: 0 !important;
+
+  &-open {
+    overflow-y: auto;
+  }
+
+  &-480w {
+    min-width: auto !important;
+    max-width: 480px !important;
+
+    .modal-dialog {
+      min-width: 480px !important;
+    }
+  }
+
+  &-960w {
+    min-width: auto !important;
+    max-width: 960px !important;
+
+    .modal-dialog {
+      min-width: 960px !important;
+    }
+  }
+}
+
+.modal:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+
+  /* Mobile Styling */
+  left: 0;
+  margin: 0;
+  margin-right: -2px;
+  // position: fixed;
+  right: 0;
+  top: 0;
+
+  @include media-tablet() {
+    left: auto;
+    margin: 0;
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+
+.modal-footer {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.modal {
+  // background: rgba(0, 0, 0, 0.6);
+
+  &-dialog {
+    @include media-tablet() {
+      min-width: 620px;
+    }
+
+    @media screen and (max-height: 767px) {
+      // min-width: 100%;
+    }
+  }
+
+  &-header {
+    border-bottom: 1px solid $border-color-grey;
+    // display: block;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 10px 20px;
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    .close {
+      font-weight: 400;
+      margin: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+  }
+
+  &-body {
+    /* autoprefixer: off */
+    -webkit-overflow-scrolling: touch;
+    background: #fcfcfc;
+    padding: 20px;
+    text-align: left;
+
+    textarea {
+      border-color: $border-color-grey-dark;
+    }
+
+    &__subtext {
+      color: $grey-medium;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-footer {
+    justify-content: center;
+    padding: 10px 15px;
+
+    .row {
+      width: 100%;
+    }
+  }
+
+  &-cancel {
+    align-items: center;
+    display: flex;
+    height: 36px;
+  }
+}
+
+.create {
+  &-company {
+    .modal {
+      &-dialog {
+        @include media-tablet() {
+          min-width: 700px;
+        }
+      }
+
+      &-title {
+        text-align: center;
+      }
+    }
+
+    &__option {
+      @include media-tablet() {
+        border-radius: 8px;
+        min-height: 360px;
+      }
+
+      .company {
+        &-option {
+          display: block;
+          padding: 30px;
+          text-align: center;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &__icon {
+            align-items: center;
+            background: #f6f6f6;
+            border-radius: 50%;
+            display: flex;
+            height: 60px;
+            justify-content: center;
+            margin: 0 auto 20px;
+            text-align: center;
+            width: 60px;
+
+            @include media-tablet() {
+              height: 160px;
+              width: 160px;
+            }
+          }
+
+          &__title {
+            color: $grey-dark;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+          }
+
+          &__text {
+            color: $grey-dark;
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.settings-resume-text {
+  border: 2px dashed #c1c3c8;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-backdrop {
+  // z-index: 1 !important;
+  &.in {
+    opacity: 0.8;
+  }
+}
+
+.modal-backdrop {
+  &.show {
+    opacity: 0.5;
+  }
+}
+
+.modal {
+  &.fade {
+    opacity: 1;
+
+    .modal-dialog {
+      transform: translate(0, 0);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/display-name": 0,
+    "no-prototype-builtins": 0,
+    "react/jsx-key": 1,
+    "react/jsx-no-duplicate-props": 1,
+    "react/no-unescaped-entities": 1,
+    "no-extra-boolean-cast": 1,
+    "no-inner-declarations": 1,
+    "no-unused-vars": 1
+  }
+}

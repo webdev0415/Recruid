@@ -1,0 +1,100 @@
+/**
+ * SETTINGS
+ * --
+ * Contains all of the commmonly used variables that are used across the CSS
+ * files. For example, regularly used colours and sizes should be held here.
+ * This helps make these values more manageable as the website progresses and
+ * changes.
+ */
+
+/**
+ * Responsive breakpoints
+ */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$maximum-width: 1400px;
+
+/**
+ * Common media queries
+ * --
+ * These mixins make it easy to define blocks of CSS for the target devices, for
+ * example:
+--------------------------------------------------------------------------------
+    @include media-tablet() {
+        ...tablet CSS here...
+    }
+--------------------------------------------------------------------------------
+ * As a general rule the base CSS should target mobiles and conditional blocks
+ * should be added for tablet and desktop devices. Don't apply this rule over
+ * smaller more manageable code.
+ */
+@mixin media-mobile() {
+  @media (min-width:#{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin media-only-mobile() {
+  @media (max-width:#{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin media-tablet() {
+  @media (min-width:#{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin media-desktop() {
+  @media (min-width:#{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin media-outer() {
+  @media (min-width:#{$maximum-width}) {
+    @content;
+  }
+}
+/**
+ * Fonts
+ */
+
+/**
+ * Colour pallet
+ */
+
+/**
+ * Purpose colours
+ */
+$white: #ffffff;
+$black: #000000;
+$grey-dark: #2c2c2c;
+$grey-medium: #74767b;
+$grey-light: #a8abb1;
+
+/**
+ * Theme colours
+ */
+$color-primary: #00cba7;
+$color-accent: #004a6d;
+$color-accent-dark: #2a3744;
+$color-secondary: #1e1e1e;
+$color-rating: #ff3159;
+$color-red: $color-rating;
+$color-orange: #f58223;
+
+/**
+ * Font colours
+ */
+$color-font-body: #1e1e1e;
+$color-font-body-light: #808080;
+$color-font-body-lighter: #d5d6d9;
+$color-font-link: $color-accent;
+
+$border-color-grey: #eeeeee;
+$border-color-grey-dark: #e5e5e5;
+$brand-linkedin: #0077b5;
+$brand-facebook: #3b5998;

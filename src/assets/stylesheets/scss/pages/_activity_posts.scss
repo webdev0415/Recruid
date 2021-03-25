@@ -1,0 +1,22 @@
+.activity-feed {
+  &__post {
+    padding: 20px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .post-avatar {
+      display: inline-block;
+      float: left;
+      height: 40px;
+      min-width: 40px;
+      overflow: hidden;
+      width: 40px;
+
+      @include media-tablet() {
+        margin-right: 15px;
+      }
+    }
+  }
+}

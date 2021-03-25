@@ -1,0 +1,10 @@
+{
+  "_comment": "in case calendar api gonna be broken replace scopes with => https://www.googleapis.com/auth/calendar",
+  "clientId": "604253835665-v93p2gepj1dthp78mrjrmr7g54t4c37s.apps.googleusercontent.com",
+  "apiKey": "AIzaSyBlwNvfDeJIASU6ra2IaJqsQhsGG8y3V5A",
+  "scope": "https://mail.google.com/",
+  "discoveryDocs": [
+    "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",
+    "https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest"
+  ]
+}

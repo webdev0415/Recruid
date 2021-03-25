@@ -1,0 +1,227 @@
+/**
+ * RESET
+ * --
+ * Contains all of the CSS used to fully reset the default styles applied to the
+ * web page by the browser.
+ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  // vertical-align:baseline;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: normal;
+  /*+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+  /* HACK:required for smooth scrolling on iOS */
+  /*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+  -webkit-overflow-scrolling: touch;
+  /*+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+  /* HACK:required for making font weights similar across browsers */
+  /*-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-*/
+  -webkit-font-smoothing: antialiased;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+/* -- HTML5 display-role reset for older browsers -- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+/* Fix for recaptcha iframe in Safari & Chrome */
+body > iframe {
+  display: none;
+}
+
+/* Change everything to use box-sizing */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+sub,
+sup {
+  /**
+     * Specified in % so that the sup/sup is the
+     * right size relative to the surrounding text
+     */
+  font-size: 50%;
+
+  /**
+     * Zero out the line-height so that it doesn't
+     * interfere with the positioning that follows
+     */
+  line-height: 0;
+
+  /**
+     * Where the magic happens:makes all browsers position
+     * the sup/sup properly, relative to the surrounding text
+     */
+  position: relative;
+
+  /**
+     * Note that if you're using Eric Meyer's reset.css, this
+     * is already set and you can remove this rule
+     */
+  vertical-align: baseline;
+}
+
+sup {
+  /**
+     * Move the superscripted text up
+     */
+  top: -0.75em;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

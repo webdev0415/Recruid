@@ -1,0 +1,103 @@
+.container {
+  composes: global(background-white);
+  border-radius: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 10px 20px;
+
+  @media screen and (min-width: 768px) {
+    border-radius: 4px;
+    margin: 0;
+  }
+}
+
+.filters {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin: 0;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: auto;
+  }
+}
+
+.filter {
+  composes: global(filter-selector);
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 160px;
+  }
+}
+
+.banner_filter {
+  composes: global(filter-selector);
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 160px;
+  }
+}
+
+.filterSelector {
+  composes: global(background-white);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 15px;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    margin-bottom: 0;
+    min-width: 100px;
+    max-width: 190px;
+  }
+
+  .Select--multi .Select-input {
+    margin-left: 30px;
+  }
+
+  input {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+}
+
+.filterSelectorInput {
+  align-items: center;
+  color: #999;
+  display: flex;
+  font-size: 15px;
+  height: 100%;
+  justify-content: space-between;
+  line-height: 20px !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+
+  button {
+    padding: 0;
+  }
+}

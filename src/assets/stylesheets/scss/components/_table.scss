@@ -1,0 +1,28 @@
+.table {
+  margin-bottom: 0;
+
+  &-responsive {
+    @media screen and (min-width: 768px) {
+      border: 0;
+      margin-bottom: 0;
+      overflow: inherit;
+    }
+  }
+
+  tbody {
+    tr {
+      td,
+      th {
+        border-color: #eee;
+        font-size: 14px;
+      }
+
+      &:last-child {
+        td,
+        th {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+/**
+ * FORMATTING
+ * --
+ * Contains all of the CSS used to re-format text after using a reset sheet.
+ * Also contains a lot of the generic classes used to format text/elements on
+ * the page.
+ */
+
+/**
+ * Core element styles
+ * --
+ * General elements that need custom styles without the use of classes.
+ */
+html {
+  /**
+   * Font sizes and line-heights set across the website use REMs. This means
+   * that they scale up/down from the base font size set against the body.
+   */
+  font-size: 13px;
+  min-height: 100%;
+  @include media-tablet() {
+    font-size: 14px;
+  }
+  @include media-desktop() {
+    font-size: 15px;
+  }
+}
+
+body {
+  color: #1e1e1e;
+  background-color: #eeeeee;
+  text-align: left;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  min-height: 100%;
+}
+
+a {
+  color: $color-font-link;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    color: darken($color-font-link, 10%);
+  }
+  &:visited,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+button {
+  padding: 0;
+
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+/**
+ * Custom class styles
+ * --
+ * Generic regular use classes and styles that can be used throughout the
+ * website.
+ */
+
+/**
+ * Clear content
+ */
+// .clear {
+//   clear: both;
+// }
+/**
+ * Consistant margin padding between elements
+ */
+/**
+ * Float alignment variations
+ */
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+.fixed {
+  position: fixed !important;
+}
+
+/**
+ * Font weights
+ */
+.light {
+  font-weight: 300 !important;
+}
+.norm {
+  font-weight: 400 !important;
+}
+.bold {
+  font-weight: 600 !important;
+}
+/**
+ * Font weight/style/transform variations
+ */
+.capitalise,
+.capitalize {
+  text-transform: capitalize !important;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+/**
+ * Text re-formatting
+ * --
+ * Styles used to re-add generic browser formatting HTML elements within a
+ * content area so that paragraphs, lists, and tables, etc, all look correctly
+ * if they are direct children of the container with this class. Formatted also
+ * trims the top margin and bottom margin from the first child and last child.
+ */
+
+/**
+ * Trim
+ * --
+ * Used to remove the top margin from the first child and the bottom margin from
+ * the last child. This is a useful alternative to using .formatted.
+*/
+
+a.disabled {
+  /* Make the disabled links grayish*/
+  opacity: 0.5;
+  /* And disable the pointer events */
+  pointer-events: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.desktop {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.background {
+  &-avatar {
+    background-color: $border-color-grey;
+  }
+  &-blue {
+    background-color: $color-accent;
+  }
+  &-primary {
+    background-color: $color-primary;
+  }
+  &-white {
+    background-color: $white;
+  }
+  &-pink {
+    background-color: $color-rating;
+  }
+}
+
+.border {
+  &-bottom {
+    &-1 {
+      border-bottom: 1px solid $border-color-grey;
+    }
+  }
+}
+
+.table-row-hover {
+  &:hover {
+    background: #f6f6f6;
+  }
+}
+
+.infinite-scroll-component {
+  overflow: inherit !important;
+}
+
+.Select-clear {
+  display: none !important;
+}

@@ -1,0 +1,136 @@
+/**
+ * DROPDOWNS
+ * --
+ * Contains CSS for modals, containers and individual dropdowns across the website.
+*/
+
+.dropdown {
+  &-menu {
+    border: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.2);
+    // box-shadow: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    li {
+      a,
+      button {
+        padding: 8px 20px;
+        text-align: left;
+        width: 100%;
+
+        &:hover {
+          background: $color-primary;
+          color: $white;
+          text-decoration: none;
+        }
+
+        &.review-link {
+          background: $color-rating;
+          color: $white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &-toggle {
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.dropdown-new {
+  border: 1px solid rgba($black, 0.15);
+  box-shadow: 0 0 8px 3px rgba($black, 0.03);
+
+  &-avatar {
+    border-radius: 50%;
+    height: 25px;
+    object-fit: cover;
+    width: 25px;
+
+    &-container {
+      float: left;
+      margin-right: 10px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  &-link {
+    color: $color-secondary !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 10px 15px !important;
+    text-align: left;
+    width: 100%;
+
+    &:hover {
+      background-color: #f6f6f6 !important;
+      // color: $white!important;
+    }
+  }
+
+  &-link-small {
+    color: $color-secondary !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    padding: 8px 10px !important;
+  }
+
+  &-header {
+    background: $border-color-grey;
+    color: $grey-medium;
+    font-weight: 600;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+  }
+
+  &-option {
+    border-bottom: 1px solid $border-color-grey;
+
+    .dropdown-new-link {
+      display: flex;
+      flex-direction: column;
+      height: auto !important;
+      min-width: 180px;
+      // min-height: 50px;
+
+      a {
+        color: inherit;
+        padding: 0;
+
+        &:hover {
+          background: transparent;
+          color: inherit;
+        }
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &-companies {
+      .dropdown-new-link {
+        padding: 14px 15px !important;
+      }
+    }
+
+    &-border {
+      border-bottom: 1px solid $border-color-grey;
+    }
+  }
+
+  &-subtext {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+}

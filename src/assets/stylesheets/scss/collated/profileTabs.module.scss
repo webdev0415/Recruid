@@ -1,0 +1,83 @@
+.activityContainer {
+  composes: global(background-white);
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  svg {
+    margin-right: 20px;
+  }
+
+  span {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  button {
+    color: #004a6d;
+    font-size: 500;
+    text-decoration: underline;
+  }
+}
+
+.resumeContainer {
+  composes: (activityContainer);
+  align-items: center;
+}
+
+.documentDetails,
+.resumeDetails {
+  align-items: center;
+  display: flex;
+
+  svg {
+    align-self: flex-start;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.activityDate {
+  align-self: flex-start;
+  color: #9a9ca1;
+  flex: none;
+  font-size: 12px;
+  text-align: right;
+
+  @media screen and (min-width: 768px) {
+    align-self: center;
+    font-size: 14px;
+  }
+}
+
+.noteHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  position: relative;
+
+  svg {
+    margin: 0;
+  }
+}

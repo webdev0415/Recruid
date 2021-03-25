@@ -1,0 +1,231 @@
+/**
+ * BUTTONS
+ * --
+ * Contains CSS for button containers and individual buttons across the website.
+*/
+
+/**
+ * Remove button element styling
+ */
+button {
+  background: transparent;
+  border: 0;
+}
+
+/**
+ * Button
+ * --
+ * Styling for a single button.
+ */
+.button {
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0;
+  text-align: center;
+  touch-action: manipulation;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.disabled {
+    background: $grey-light;
+    color: $white;
+    opacity: 0.5;
+  }
+
+  /**
+   * Button Sizing
+   * --
+   * Styling for sizing different buttons.
+   */
+
+  &--full {
+    width: 100%;
+  }
+
+  &--small {
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  &--default {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  &--large {
+    font-size: 16px;
+    padding: 20px 50px;
+  }
+
+  /**
+   * Button Colors
+   * --
+   * Styling for the colors of the buttons.
+   */
+
+  &--dark {
+    background-color: $grey-dark;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($grey-dark, 5%);
+      color: $white;
+    }
+  }
+
+  &--orange {
+    background-color: $color-rating;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-rating, 5%);
+      color: $white;
+    }
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-primary, 5%);
+      color: $white;
+    }
+  }
+
+  &--blue {
+    background-color: $color-accent;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-accent, 5%);
+      color: $white;
+    }
+  }
+
+  &--blue-dark {
+    background-color: $color-accent-dark;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-accent-dark, 5%);
+      color: $white;
+    }
+  }
+
+  &--grey {
+    background-color: $grey-medium;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($grey-medium, 5%);
+      color: $white;
+    }
+  }
+
+  &--grey-light {
+    background-color: $grey-light;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($grey-light, 5%);
+      color: $white;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    box-shadow: none;
+    color: $color-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $color-primary;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    border: 1px solid $border-color-grey;
+    box-shadow: none;
+    color: $color-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($white, 2.5%);
+      color: $color-secondary;
+    }
+  }
+
+  &--cancel {
+    color: $grey-medium;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+
+  &--delete {
+    color: $grey-medium;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+
+  &--post {
+    background-color: $color-primary;
+    color: $white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 15px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: darken($color-primary, 5%);
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.viewProfessionals {
+  composes: global(color-blue);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.modalImport {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 250px;
+  padding: 40px 0 50px;
+
+  button {
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+.modalUpload {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 50px 0;
+
+  button {
+    max-width: 130px;
+    width: 100%;
+  }
+}
+
+.resumeUpload {
+  composes: global(settings-resume-upload);
+  align-items: center;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.resumeUploaded {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  svg {
+    margin-bottom: 10px;
+  }
+}
